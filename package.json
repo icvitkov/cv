@@ -11,8 +11,11 @@
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "latest",
+		"@nuxtjs/style-resources": "^1.2.1",
 		"@types/node": "^18.17.1",
 		"gh-pages": "^5.0.0",
-		"nuxt": "^3.6.5"
+		"nuxt": "^3.6.5",
+		"sass": "^1.68.0",
+		"sass-loader": "^13.3.2"
 	}
 }
