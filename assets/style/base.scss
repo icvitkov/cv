@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Syncopate:wght@700&display=swap');
+
+//$color-black-blue: #0F0F17;
+$color-black-blue: #0F0E16;
+$color-mod-magenta: #ac5ec0;
+$color-mod-blue: #5ba6c3;
+$color-light-blue: #3888ff;
+$color-soft-orange: #e6c593;
+
+$mobile-columns: 4;
+$tablet-columns: 8;
+$desktop-columns: 12;
+
+
+* {
+    font-family: 'Barlow', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syncopate', sans-serif;
+}
+
+/* The starting point was a base font size of 16px, and then each subsequent font size was calculated by multiplying the previous size by approximately 1.2 */
+/* https://modern-fluid-typography.vercel.app/ */
+
+h1 {
+    font-size: clamp(2.25rem, 5vw + 1rem, 6rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 3vw + 1rem, 4rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+}
+
+h4 {
+    font-size: clamp(1.125rem, 1vw + 1rem, 2.25rem);
+}
+
+h5 {
+    font-size: clamp(0.938rem, 1vw + 1rem, 1.75rem);
+}
+
+h6 {
+    font-size: clamp(0.938rem, 1vw + 1rem, 1.375rem);
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat($mobile-columns, 1fr); // 4 columns on mobilep
+    grid-template-rows: auto;
+    gap: 8px;
+    padding-inline: 8px;
+    width: 100%;
+    justify-self: center;
+    position: relative;
+    row-gap: 48px;  
+  
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat($tablet-columns, 1fr); // 8 columns on tablet
+      padding-inline: 16px;
+
+    }
+  
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat($desktop-columns, 1fr); // 12 columns on larger screens
+      max-width: 77.5rem;
+      row-gap: unset;
+    }
+
+  }
+
+  body {
+    background-color: $color-black-blue;
+  }
+
+
+  body::after {
+    content: "";
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 182px;
+    opacity: 0.06;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  nav, main {
+    z-index: 2;
+  }
+
+  html, body {
+    scroll-behavior: smooth;
+  }
