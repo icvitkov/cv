@@ -2,7 +2,10 @@
 	<NavBar />
 	<Hero />
 	<About />
+	<Experience />
+	<Projects />
 	<Education />
+	<Contact />
 </template>
 <style lang="scss">
 main {
