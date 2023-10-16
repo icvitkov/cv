@@ -1,8 +1,11 @@
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
+  ssr: false,
   app: {
-    baseURL: '/'
+    baseURL: '/',
+    buildAssetsDir: 'assets'
   },
   vite: {
     css: {
@@ -13,5 +16,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  modules: [ '@vueuse/nuxt', 'nuxt-svgo'],
+
   devtools: { enabled: true }
 })
