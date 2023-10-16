@@ -83,6 +83,7 @@ const yearsSince = computed(() => {
 	}
 
 	&::before {
+		z-index: -1;
 		content: "";
 		position: absolute;
 		inset: 0;
