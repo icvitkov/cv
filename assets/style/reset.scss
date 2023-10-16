@@ -9,9 +9,10 @@
 /* remove default spacing */
 /* force styling of type through styling, rather than elements */
 
-body, html, __nuxt {
+body, html, __nuxt, p {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* dark mode user-agent-styles */
@@ -22,7 +23,7 @@ html {
 
 /* min body height */
 body, #__nuxt {
-  min-height: 100dvh;
+  min-height: 100vh;
   display: grid;
   position: relative;
 }
@@ -39,4 +40,11 @@ video {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline;
+  margin: 0;
+}
+
+li, ul {
+    margin: 0;
+    padding: 0;
 }

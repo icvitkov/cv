@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Syncopate:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Syncopate:wght@400;700&display=swap');
 
 //$color-black-blue: #0F0F17;
 $color-black-blue: #0F0E16;
@@ -14,10 +14,14 @@ $desktop-columns: 12;
 
 * {
     font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Syncopate', sans-serif;
+    line-height: 1.2;
 }
 
 /* The starting point was a base font size of 16px, and then each subsequent font size was calculated by multiplying the previous size by approximately 1.2 */
@@ -53,7 +57,7 @@ h6 {
     grid-template-columns: repeat($mobile-columns, 1fr); // 4 columns on mobilep
     grid-template-rows: auto;
     gap: 8px;
-    padding-inline: 8px;
+    padding-inline: 16px;
     width: 100%;
     justify-self: center;
     position: relative;
@@ -61,7 +65,7 @@ h6 {
   
     @media screen and (min-width: 768px) {
       grid-template-columns: repeat($tablet-columns, 1fr); // 8 columns on tablet
-      padding-inline: 16px;
+      padding-inline: 24px;
 
     }
   
@@ -73,10 +77,24 @@ h6 {
 
   }
 
-  body {
-    background-color: $color-black-blue;
+  .grid-section {
+    display: grid;
+    padding-block: 24px;
+
+    @media screen and (min-width: 768px) {
+      padding-block: 48px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-block: 80px;
+    }
   }
 
+  body {
+    background-color: $color-black-blue;
+
+  }
+  
 
   body::after {
     content: "";
@@ -92,11 +110,21 @@ h6 {
     height: 100%;
     z-index: -1;
   }
-
+  
   nav, main {
     z-index: 2;
   }
-
+  
   html, body {
     scroll-behavior: smooth;
+    
+  }
+  
+  a {
+    color: $color-mod-blue;
+  }
+
+  
+  .no-scroll {
+    overflow: hidden;
   }
