@@ -2,19 +2,19 @@
 
 <template>
 	<section class="hero">
-		<div class="grid-container">
+		<div class="grid-container hero-container">
 			<div class="title">
 				<h1 class="main-title">Ivana <br />Cvitkovic</h1>
 				<h3>frontend developer</h3>
 			</div>
 			<div class="visuals">
-				<img class="grid-image" src="grid.png" alt="" />
 				<div class="circle"></div>
 				<div class="block"></div>
 			</div>
+			<!-- <LinkButton class="link" text="View Github" link="/" /> -->
 			<p class="short-description">
-				Experienced frontend developer with passion for developing web
-				applications based on modern technologies.
+				Combining academic knowledge and passion for modern technology, I enjoy
+				creating impactful frontend solutions
 			</p>
 		</div>
 	</section>
@@ -37,9 +37,27 @@
 	display: grid;
 	height: 100%;
 	min-height: 150px;
-	position: relative;
+	position: absolute;
 	align-items: center;
 	width: 100%;
+	z-index: -1;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 150%;
+		height: 150%;
+		background-image: url("/grid.png");
+		background-position: bottom;
+		background-repeat: no-repeat;
+		z-index: -1;
+		bottom: -35px;
+
+		@media screen and (min-width: 1024px) {
+			width: 100%;
+			height: 100%;
+		}
+	}
 
 	@media screen and (min-width: 1024px) {
 		grid-column: span 7;
@@ -49,7 +67,9 @@
 
 .grid-image {
 	position: absolute;
-	max-height: 80dvh;
+	max-height: 80vh;
+	height: 100%;
+	width: 100%;
 	z-index: -1;
 	@media screen and (min-width: 1024px) {
 		top: 48px;
@@ -85,19 +105,16 @@
 	height: 170px;
 	width: 350px;
 	position: absolute;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border: 1px solid grey;
 	border-right: unset;
 	backdrop-filter: blur(5px);
 	justify-self: center;
 	margin-left: 350px;
-	border: double 1px 80808024;
 	border-radius: 5px;
-	background-image: linear-gradient(90deg, #80808024, transparent 90%),
-		linear-gradient(90deg, #80808024, transparent 90%);
-	background-origin: border-box;
-	background-clip: content-box, border-box;
+	background: linear-gradient(
+		-90deg,
+		transparent 10%,
+		rgba(128, 128, 128, 0.3)
+	);
 
 	@media screen and (min-width: 768px) {
 		height: 220px;
@@ -111,11 +128,38 @@
 		height: 350px;
 		margin-left: 600px;
 	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		padding: 2px;
+		background: linear-gradient(
+			-90deg,
+			transparent 10%,
+			rgba(128, 128, 128, 0.3)
+		);
+		mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		-webkit-mask: linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		border-radius: 5px;
+	}
+}
+
+.link {
+	grid-column: 1/-1;
+
+	@media screen and (min-width: 1024px) {
+		grid-column: 1/7;
+	}
 }
 
 .short-description {
 	grid-column: 1/-1;
 	font-size: clamp(0.938rem, 1vw + 1rem, 1.75rem);
+	align-self: end;
+	padding-block-end: 12px;
 
 	@media screen and (min-width: 1024px) {
 		grid-column: 7/-1;
@@ -123,9 +167,17 @@
 }
 
 .hero {
-	height: 100dvh;
+	height: 100vh;
+	margin-top: 0;
 	display: grid;
-	overflow-x: hidden;
-	margin-top: 86px;
+
+	@media screen and (min-width: 768px) {
+		height: calc(100vh - 86px);
+		margin-top: 86px;
+	}
+}
+
+.hero-container {
+	height: 100%;
 }
 </style>
