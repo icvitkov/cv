@@ -5,6 +5,7 @@
 		"build": "nuxt build",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
+		"postgenerate": "cp static/IvanaCvitkovicCV.pdf dist/",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
 		"deploy": "gh-pages -d dist"
