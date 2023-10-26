@@ -7,7 +7,7 @@
 			<div class="ex-list">
 				<CVCard title="Frontend developer at Barrage">
 					<template #title>
-						<p>since Sep 2021</p>
+						<p>Sep 2021 - Oct 2023</p>
 						<p>full-time</p></template
 					>
 					<template #details>
