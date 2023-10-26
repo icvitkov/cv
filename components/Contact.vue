@@ -19,7 +19,7 @@
 					>GPG key</a
 				>
 				<span class="button">
-					<a href="assets/IvanaCvitkovicCV.pdf" download>Download CV</a>
+					<a href="/IvanaCvitkovicCV.pdf" download>Download CV</a>
 				</span>
 			</div>
 		</div>
