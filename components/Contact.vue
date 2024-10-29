@@ -8,9 +8,9 @@
 				<span class="label">Email</span>
 				<a href="mailto:cvitkov.ivana@gmail.com">cvitkov.ivana@gmail.com</a>
 				<a href="https://github.com/icvitkov" target="_blank">Github</a>
-				<a href="https://www.linkedin.com/in/ivana-cvitkovi%C4%87-6b1092209/    " target="_blank">LinkedIn</a>
+				<a href="https://www.linkedin.comn/ivana-cvitkovi%C4%87-6b1092209/    " target="_blank">LinkedIn</a>
 				<span class="button">
-					<a href="/IvanaCvitkovicCV.pdf" download>Download CV</a>
+					<a href="./IvanaCvitkovicCV.pdf" download>Download CV</a>
 				</span>
 			</div>
 		</div>
