@@ -15,7 +15,8 @@ defineProps<{
 			<span class="year">{{ year }}</span>
 		</div>
 		<h5 class="project-name">{{ name }}</h5>
-		<span class="project-link">{{ link ? link : "private repo" }}</span>
+		<a v-if="link" :href="link" class="project-type link">{{ link }}</a>
+		<span v-else class="project-type">private repo</span>
 		<div class="project-description">
 			<slot name="description"></slot>
 		</div>
@@ -38,6 +39,7 @@ defineProps<{
 	display: flex;
 	flex-direction: column;
 }
+
 .project-header {
 	display: flex;
 	gap: 24px;
@@ -48,8 +50,12 @@ defineProps<{
 	}
 }
 
-.project-link {
+.project-type {
 	color: $color-mod-blue;
+
+	&.link:hover {
+		filter: hue-rotate(90deg);
+	}
 }
 
 .project-name {
@@ -63,6 +69,7 @@ defineProps<{
 	margin-top: 24px;
 	flex-grow: 1;
 }
+
 .tech-stack {
 	padding-top: 12px;
 	display: flex;

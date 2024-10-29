@@ -5,11 +5,28 @@
 		<div class="grid-container experience">
 			<h2 class="ex-title">experience</h2>
 			<div class="ex-list">
+
+				<CVCard title="Frontend developer at Keeper Solutions">
+					<template #title>
+						<p>Oct 2023 - present</p>
+						<p>full-time</p>
+					</template>
+					<template #details>
+						<p>
+							As a Frontend Developer at Keeper Solutions, I worked on a Talent Acquisition application using Nuxt.js for the frontend,
+							Node.js with Azure Functions for backend services, and MongoDB for data management. I collaborated with an international
+							team and served clients based in Atlanta, balancing feature development with the demands of a live production environment.
+							The team was transitioning to Agile methodologies, which added unique challenges given the active client base and existing
+							workflows. This role enhanced my ability to deliver high-quality features while ensuring stability for end users.
+						</p>
+					</template>
+				</CVCard>
+
 				<CVCard title="Frontend developer at Barrage">
 					<template #title>
 						<p>Sep 2021 - Oct 2023</p>
-						<p>full-time</p></template
-					>
+						<p>full-time</p>
+					</template>
 					<template #details>
 						<p>
 							I've had the opportunity to work on a diverse range of projects,

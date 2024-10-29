@@ -5,20 +5,30 @@
 		<div class="grid-container">
 			<h2 class="projects-title">projects</h2>
 			<div class="projects-list">
-				<ProjectItem
-					client="Barrage"
-					year="2023"
-					name="Nuxt Starter Kit"
-					:tech-stack="[
-						'nuxt',
-						'vite',
-						'typescript',
-						'html5',
-						'turborepo',
-						'strapi',
-						'pnpm',
-					]"
-				>
+				<ProjectItem client="AppVault" year="2024" name="AppVault" link="https://portal.appvault.com" :tech-stack="[
+					'nuxt',
+					'typescript',
+					'node',
+					'Azure Functions',
+					'MongoDB',
+					'html5',
+					'css',
+				]">
+					<template #description>
+						This project enabled clients to create customized web pages to advertise open positions and provided an integrated portal to
+						manage the entire hiring process
+					</template>
+				</ProjectItem>
+
+				<ProjectItem client="Barrage" year="2023" name="Nuxt Starter Kit" :tech-stack="[
+					'nuxt',
+					'vite',
+					'typescript',
+					'html5',
+					'turborepo',
+					'strapi',
+					'pnpm',
+				]">
 					<template #description>
 						Generated significant time savings by implementing a frontend
 						monorepo structure, enhancing code sharing and reusability across
@@ -27,13 +37,8 @@
 					</template>
 				</ProjectItem>
 
-				<ProjectItem
-					client="Barrage"
-					year="2022 - 2023"
-					name="hive"
-					link="https://www.hivecloud.com"
-					:tech-stack="['vue3', 'vite', 'typescript', 'html5', 'postCSS']"
-				>
+				<ProjectItem client="Barrage" year="2022 - 2023" name="hive" link="https://www.hivecloud.com"
+					:tech-stack="['vue3', 'vite', 'typescript', 'html5', 'postCSS']">
 					<template #description>
 						Developed and maintained a web page, end-user application, and
 						backoffice system for efficient provisioning of virtual machines and
@@ -42,13 +47,8 @@
 					</template>
 				</ProjectItem>
 
-				<ProjectItem
-					client="All4Labels"
-					year="2021 - 2022"
-					name="all4Labels"
-					link="https://www.roango.com"
-					:tech-stack="['vue3', 'vite', 'typescript', 'html5', 'sass']"
-				>
+				<ProjectItem client="All4Labels" year="2021 - 2022" name="all4Labels" link="https://all4labels.com"
+					:tech-stack="['vue3', 'vite', 'typescript', 'html5', 'sass']">
 					<template #description>
 						My primary role revolved around the end-user application, addressing
 						various user roles and their privileges. A notable achievement was
@@ -58,13 +58,8 @@
 					</template>
 				</ProjectItem>
 
-				<ProjectItem
-					client="Roango"
-					year="2021"
-					name="Roango"
-					link="https://www.roango.com"
-					:tech-stack="['react', 'typescript', 'gatsby', 'html5', 'sass']"
-				>
+				<ProjectItem client="Roango" year="2021" name="Roango" link="https://www.roango.com"
+					:tech-stack="['react', 'typescript', 'gatsby', 'html5', 'sass']">
 					<template #description>
 						I was maintaining both the web page and the backoffice application
 						for a project dedicated to transforming the recruitment approach for
@@ -75,12 +70,7 @@
 					</template>
 				</ProjectItem>
 
-				<ProjectItem
-					client="Sartura"
-					year="2020 - 2021"
-					name="Kaon"
-					:tech-stack="['vue2', 'webpack', 'html5', 'quasar']"
-				>
+				<ProjectItem client="Sartura" year="2020 - 2021" name="Kaon" :tech-stack="['vue2', 'webpack', 'html5', 'quasar']">
 					<template #description>
 						Managed the user interface for OpenWrt-based devices designed for a
 						prominent Korean broadband service provider. My role primarily
@@ -89,13 +79,8 @@
 					</template>
 				</ProjectItem>
 
-				<ProjectItem
-					client="Sartura"
-					year="2020 - 2021"
-					link="https://www.sentinel-sps.com/"
-					name="Sentinel"
-					:tech-stack="['vue2', 'webpack', 'html5', 'sass']"
-				>
+				<ProjectItem client="Sartura" year="2020 - 2021" link="https://www.sentinel-sps.com" name="Sentinel"
+					:tech-stack="['vue2', 'webpack', 'html5', 'sass']">
 					<template #description>
 						Participated in a white-label project aimed at developing innovative
 						features for devices utilizing OpenWrt technology. The project's
@@ -132,6 +117,7 @@
 
 .projects {
 	position: relative;
+
 	&::after {
 		content: "";
 		width: 30%;
