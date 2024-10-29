@@ -8,16 +8,7 @@
 				<span class="label">Email</span>
 				<a href="mailto:cvitkov.ivana@gmail.com">cvitkov.ivana@gmail.com</a>
 				<a href="https://github.com/icvitkov" target="_blank">Github</a>
-				<a
-					href="https://www.linkedin.com/in/ivana-cvitkovi%C4%87-6b1092209/    "
-					target="_blank"
-					>LinkedIn</a
-				>
-				<a
-					href="https://keys.openpgp.org/vks/v1/by-fingerprint/14288347545644A003D51CB3524EC245192050D4"
-					target="_blank"
-					>GPG key</a
-				>
+				<a href="https://www.linkedin.com/in/ivana-cvitkovi%C4%87-6b1092209/    " target="_blank">LinkedIn</a>
 				<span class="button">
 					<a href="/IvanaCvitkovicCV.pdf" download>Download CV</a>
 				</span>
@@ -63,12 +54,10 @@
 		inset: 0;
 		border-radius: 5px;
 		padding: 2px;
-		background: linear-gradient(
-			50deg,
-			$color-mod-magenta 50%,
-			$color-light-blue,
-			$color-mod-blue
-		);
+		background: linear-gradient(50deg,
+				$color-mod-magenta 50%,
+				$color-light-blue,
+				$color-mod-blue);
 		mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 		-webkit-mask: linear-gradient(#fff 0 0) content-box,
 			linear-gradient(#fff 0 0);
@@ -80,12 +69,10 @@
 	&:hover {
 		&::before {
 			transform: rotatey(180deg);
-			background: linear-gradient(
-				50deg,
-				$color-mod-blue 50%,
-				$color-light-blue,
-				$color-mod-magenta
-			);
+			background: linear-gradient(50deg,
+					$color-mod-blue 50%,
+					$color-light-blue,
+					$color-mod-magenta);
 		}
 	}
 }

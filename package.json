@@ -8,7 +8,7 @@
 		"postgenerate": "cp static/IvanaCvitkovicCV.pdf dist/",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"deploy": "gh-pages -d dist"
+		"deploy": "nuxt generate && gh-pages --dotfiles -d .output/public"
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "latest",
